@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <title>Ghorer Garage | RC Car Store</title>
+  <style>
+    body {
+      font-family: Arial;
+      background: linear-gradient(120deg, red, yellow, green);
+      text-align: center;
+      padding: 40px;
+    }
+    .card {
+      background: white;
+      padding: 20px;
+      max-width: 300px;
+      margin: auto;
+      border-radius: 12px;
+    }
+    button {
+      background: red;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Ghorer Garage</h1>
+  <p>RC Car Online Store</p>
+
+  <div class="card">
+    <h2>RC Car</h2>
+    <p>৳2,8swnwj  1`00</p>
+    <button onclick="order()">Buy Now</button>
+  </div>
+
+  <script>
+    function order() {
+      const name = prompt("আপনার নাম লিখুন");
+      const phone = prompt("মোবাইল নাম্বার লিখুন");
+      const address = prompt("ঠিকানা লিখুন");
+
+      if (name && phone && address) {
+        const msg = `নতুন অর্ডার এসেছে 🚗
+পণ্য: RC Car
+নাম: ${name}
+ফোন: ${phone}
+ঠিকানা: ${address}
+পেমেন্ট: Cash on Delivery`;
+        window.open(
+          "https://wa.me/88017XXXXXXXX?text=" + encodeURIComponent(msg),
+          "_blank"
+        );
+        alert("অর্ডার কনফার্মড!");
+      }
+    }
+  </script>
+
+</body>
+</html>
+
